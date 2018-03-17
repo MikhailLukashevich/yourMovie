@@ -1,0 +1,17 @@
+.lead{
+  text-align:center;
+}
+
+.invalid{
+  font-family: sans-serif;
+  font-size:14px;
+  margin-bottom:0;
+  margin-top:5px;
+  color:darkred;
+}
+
+@media (max-width:768px){
+  .xsInput{
+    padding:0 15px;
+  }
+}

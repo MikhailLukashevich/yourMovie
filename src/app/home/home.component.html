@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn-filter">
+      <button type="button" *ngFor="let item of filter" (click)="removeFilter(item)">
+        <span>{{item}}</span>
+        <span class="glyphicon glyphicon-trash"></span>
+      </button>
+    </div>
+    <div class="empty"></div>
+  </div>
+</div>
+
+<div class="nav">
+  <ul class="navigation">
+    <li class="firstList"><a href="" title="Home" class="list">Country</a></li>
+    <li><a title="Portfolio" class="list">Genre</a>
+      <ul>
+        <li>
+          <a title="Action" (click)="addFilter('Action')"  type="button">
+            <span
+              class="glyphicon glyphicon-ok icon"
+              style="color:#6cb241"
+              [ngClass]="{'hideIcon': hideIcon('Action')}"></span>
+            Action
+          </a>
+        </li>
+        <li>
+          <a title="Drama" (click)="addFilter('Drama')"  type="button">
+             <span
+               class="glyphicon glyphicon-ok icon"
+               style="color:#6cb241"
+               [ngClass]="{'hideIcon': hideIcon('Drama')}"></span>
+            Drama</a></li>
+        <li>
+          <a title="Documentary" (click)="addFilter('Documentary')"  type="button">
+            <span
+              class="glyphicon glyphicon-ok icon"
+              style="color:#6cb241"
+              [ngClass]="{'hideIcon': hideIcon('Documentary')}"></span>
+            Documentary</a></li>
+        <li>
+          <a title="Cartoons" (click)="addFilter('Cartoons')"  type="button">    <span
+            class="glyphicon glyphicon-ok icon"
+            style="color:#6cb241"
+            [ngClass]="{'hideIcon': hideIcon('Cartoons')}"></span>
+            Cartoons</a></li>
+        <li>
+          <a title="Comedy" (click)="addFilter('Comedy')"  type="button">
+            <span
+              class="glyphicon glyphicon-ok icon"
+              style="color:#6cb241"
+              [ngClass]="{'hideIcon': hideIcon('Comedy')}"></span>
+            Comedy</a></li>
+      </ul>
+    </li>
+    <li><a href="" title="Contact" class="list">Year of issue</a></li>
+    <div class="clear"></div>
+  </ul>
+</div>
+
+<div class="home-page">
+  <div class="container">
+    <div class="row">
+
+      <ng-container *ngFor="let item of items">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="cards">
+            <div id="box1"> <a href="#"><img src="../../assets/img/matrix.jpg" alt="" /></a>
+              <h3 class="subtitle">{{item.title}}</h3>
+              <p>Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Duis pretium velit ac mauris. Proin eu wisi suscipit nulla suscipiy.</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+  </div>
+</div>
